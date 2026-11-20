@@ -1,29 +1,43 @@
 # Prashant Dhote — Full Stack Developer Portfolio
 
-React + Vite + Tailwind CSS + Framer Motion + Lucide (client) and Node.js + Express + Nodemailer (server).
-Contact form se message seedha aapke email par aata hai. Is project mein database ki zaroorat nahi hai.
+Built using React + Vite + Tailwind CSS + Framer Motion + Lucide (Client) and Node.js + Express + Nodemailer (Server).
 
-## Run (npm run dev)
+The contact form allows visitors to send messages directly through the website. No database is required.
+
+## Run Locally
+
 ```bash
-npm run install:all          # ek baar
-cp server/.env.example server/.env   # aur values bharo (neeche dekho)
-npm run dev                  # client: http://localhost:5173  |  server: http://localhost:5000
+npm run install:all
+npm run dev
 ```
 
-## Email setup (Gmail)
-1. Google Account → Security → 2-Step Verification ON karo.
-2. "App passwords" se ek 16-character password banao.
-3. `server/.env` mein: `SMTP_USER=aapka@gmail.com`, `SMTP_PASS=<app password>`, `CONTACT_TO_EMAIL=aapka@gmail.com`.
-4. `MAIL_DRY_RUN=true` rakhoge to email bhejne ki jagah server console mein print hoga (testing ke liye). Asli email ke liye isse hata do ya `false` karo.
+- Client: http://localhost:5173
+- Server: http://localhost:5000
 
-SMTP password sirf server ke `.env` mein rehta hai, frontend mein kabhi nahi jaata.
+## Email Configuration
 
-## Content badalna
-- Sab text/links/projects/certificates: `client/src/data.js` (jahan `""` hai wo placeholder hai).
-- Resume: apna PDF `client/public/Prashant_Dhote_Resume.pdf` naam se rakho.
-- Project screenshots: `client/public/projects/` mein image daalo aur `data.js` mein `image: "/projects/naam.png"` likho.
-- Apni photo chahiye to `Hero.jsx` ke `HeroVisual` ko photo se replace kar do.
+The contact form uses Nodemailer for email functionality.
 
-## Deploy
-- Client: Vercel/Netlify (`client`, build `npm run build`, env `VITE_API_URL=<server url>`).
-- Server: Render/Railway (`server`, env: `SMTP_*`, `CONTACT_TO_EMAIL`, `CLIENT_ORIGIN=<client url>`).
+Configure the required environment variables in the server environment before running the application.
+
+For testing, you can enable dry-run mode to print email details in the server console instead of sending actual emails.
+
+## Customize Content
+
+- **Text, Links, Projects, and Certificates:** Edit `client/src/data.js`.
+- **Resume:** Add your PDF as `client/public/Prashant_Dhote_Resume.pdf`.
+- **Project Screenshots:** Add images to `client/public/projects/` and reference them in `data.js` using `image: "/projects/filename.png"`.
+- **Profile Photo:** Replace the `HeroVisual` component in `Hero.jsx` with your own photo if desired.
+
+## Deployment
+
+**Client — Vercel / Netlify**
+- Root Directory: `client`
+- Build Command: `npm run build`
+- Environment Variable: `VITE_API_URL` (your deployed server URL).
+
+**Server — Render / Railway**
+- Root Directory: `server`
+- Configure the required email and frontend-origin environment variables through the hosting platform's environment settings.
+
+**Security:** Never upload `.env` files, passwords, API keys, or private credentials to GitHub.
