@@ -1,3 +1,11 @@
+import college from "../assets/college.png";
+import gpt from "../assets/gpt.png";
+import travel from "../assets/traval.png";
+import food from "../assets/food.png";
+import java from "../assets/java.png";
+import ml from "../assets/ml.png";
+import tcs from "../assets/tcs.png";
+import prompt from "../assets/promt eng.-github copilot.png";
 import {
   Coffee, Braces, FileCode2, Palette, Atom, Wind, Server, Network, Webhook,
   Database, Table2, GitBranch, Github, Send, Terminal,
@@ -43,33 +51,43 @@ export const skillGroups = [
 ];
 
 // TODO: confirm each project's tech tags, then add github/live URLs and screenshots (image: "/projects/name.png").
+
 export const projects = [
   {
     name: "College Management System",
     desc: "A web application for managing college-related information and operations.",
     tags: ["React.js", "Node.js", "MongoDB"],
-    github: "https://github.com/prashant106dhote", live: "", image: "accets/college.png",
+    github: "https://github.com/prashant106dhote",
+    live: "",
+    image: college,
   },
   {
     name: "QuickGPT",
     desc: "An AI-based application.",
     tags: ["React.js", "Node.js", "AI"],
-    github: "https://github.com/prashant106dhote", live: "https://ai-dra-chatbot-online-offline-gx9a-git-main-super8.vercel.app/", image: "accets/gpt.png",
+    github: "https://github.com/prashant106dhote",
+    live: "https://ai-dra-chatbot-online-offline-gx9a-git-main-super8.vercel.app/",
+    image: gpt,
   },
   {
     name: "Wanderlust",
     desc: "A web application for exploring and managing travel listings.",
     tags: ["Node.js", "Express.js", "MongoDB"],
-    github: "https://github.com/prashant106dhote", live: "https://major-project-3-bap1.onrender.com/listings", image: "accets/traval.png",
+    github: "https://github.com/prashant106dhote",
+    live: "https://major-project-3-bap1.onrender.com/listings",
+    image: travel,
   },
   {
     name: "Smart Food Donation System",
     desc: "A food donation platform connecting donors with NGOs.",
     contribution: "My contribution: frontend, including the donor dashboard, donation creation and donation status tracking.",
     tags: ["React.js", "Frontend"],
-    github: "https://github.com/prashant106dhote", live: "", image: "accets/food.png",
+    github: "https://github.com/prashant106dhote",
+    live: "",
+    image: food,
   },
 ];
+
 
 export const experience = [
   {
@@ -106,8 +124,8 @@ export const education = [
 ];
 
 export const certificates = [
-  { title: "Java Programming", issuer: "NPTEL", detail: "Gold Certificate, 93%", image: "accets/java.png", verify: "accets/java.png" },
-  { title: "Introduction to Machine Learning", issuer: "NPTEL", detail: "Course certificate", image: "accets/ml.png", verify: "accets/ml.png" },
-  { title: "Career Edge", issuer: "TCS iON", detail: "Career readiness program", image: "accets/tcs.png", verify: "accets/tcs.png" },
-  { title: "Prompt Engineering and GitHub Copilot", issuer: "Microsoft", detail: "Course certificate", image: "accets/promt eng.-github copilot.png", verify: "accets/promt eng.-github copilot.png" },
+  { title: "Java Programming", issuer: "NPTEL", detail: "Gold Certificate, 93%", image: java, verify: java },
+  { title: "Introduction to Machine Learning", issuer: "NPTEL", detail: "Course certificate", image: ml, verify: ml },
+  { title: "Career Edge", issuer: "TCS iON", detail: "Career readiness program", image: tcs, verify: tcs },
+  { title: "Prompt Engineering and GitHub Copilot", issuer: "Microsoft", detail: "Course certificate", image: prompt, verify: prompt },
 ];
