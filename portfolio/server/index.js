@@ -68,6 +68,9 @@ app.post("/api/contact", limiter, async (req, res) => {
     res.status(500).json({ error: "Could not send your message right now. Please try again later." });
   }
 });
+app.get("/", (req, res) => {
+  res.send("Portfolio Backend is Running Successfully!");
+});
 
 
 app.listen(PORT, () => {
