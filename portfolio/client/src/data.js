@@ -1,11 +1,12 @@
-import college from "../assets/college.png";
-import gpt from "../assets/gpt.png";
-import travel from "../assets/traval.png";
-import food from "../assets/food.png";
-import java from "../assets/java.png";
-import ml from "../assets/ml.png";
-import tcs from "../assets/tcs.png";
-import prompt from "../assets/promt eng.-github copilot.png";
+import college from "../accets/college.png";
+import gpt from "../accets/gpt.png";
+import travel from "../accets/traval.png";
+import food from "../accets/food.png";
+
+import java from "../accets/java.png";
+import ml from "../accets/ml.png";
+import tcs from "../accets/tcs.png";
+import prompt from "../accets/promt eng.-github copilot.png";
 import {
   Coffee, Braces, FileCode2, Palette, Atom, Wind, Server, Network, Webhook,
   Database, Table2, GitBranch, Github, Send, Terminal,
