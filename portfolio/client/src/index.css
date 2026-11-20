@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Sora", "Inter", system-ui, sans-serif;
+  --color-ink: #070b1a;
+  --color-violet: #8b5cf6;
+  --color-azure: #3b82f6;
+  --color-aqua: #22d3ee;
+}
+
+html { scroll-behavior: smooth; background: var(--color-ink); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--color-ink); color: #e2e8f0; font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+:focus-visible { outline: 2px solid var(--color-aqua); outline-offset: 3px; border-radius: 8px; }
+::selection { background: rgba(139, 92, 246, .45); }
+
+.grad-text { background: linear-gradient(90deg, #a78bfa, #60a5fa 50%, #22d3ee); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.grad-bg { background: linear-gradient(90deg, #8b5cf6, #3b82f6 55%, #22d3ee); }
+.glass { background: rgba(255, 255, 255, .04); border: 1px solid rgba(255, 255, 255, .1); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: 0 10px 40px -12px rgba(0, 0, 0, .6); }
+.glow-hover { transition: border-color .25s, box-shadow .25s; }
+.glow-hover:hover { border-color: rgba(34, 211, 238, .45); box-shadow: 0 0 0 1px rgba(34, 211, 238, .25), 0 18px 50px -16px rgba(139, 92, 246, .55); }
+
+.particle { position: absolute; border-radius: 9999px; background: #a5b4fc; opacity: 0; animation: drift linear infinite; }
+@keyframes drift { 0% { transform: translateY(0); opacity: 0; } 15% { opacity: .55; } 85% { opacity: .35; } 100% { transform: translateY(-120px); opacity: 0; } }
+.caret { margin-left: 2px; animation: blink 1s steps(1) infinite; color: var(--color-aqua); -webkit-text-fill-color: var(--color-aqua); }
+@keyframes blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .particle, .caret { animation: none; } }
